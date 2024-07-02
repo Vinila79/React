@@ -4,11 +4,11 @@
 // import { ImageComponent } from "./Components/image/imageComponenets";
 // import { ListParentOrdered} from "./Components/list/listparent";
 // import { CardComponent } from "./Components/Card/CardComponent";
-import CustomAccordion from "./Components/Accordian/accordian.js";
 
 
 const App =() =>{
     return(
+      <h5>hguhjh</h5>
     //     <div>
     //         <Heading1/>
     //         <Heading2/>
@@ -96,7 +96,6 @@ const App =() =>{
     
 //   )};
 // </div>
-<CustomAccordion/>
 );
 };
 
