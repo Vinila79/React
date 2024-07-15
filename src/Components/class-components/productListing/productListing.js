@@ -1,3 +1,4 @@
+import axios from "axios";
 import CustomSpinner from "../../spinner/CustomSpinner";
 
 
@@ -6,15 +7,33 @@ const { Component} = require("react");
 
 class ProductListing extends Component{
 
-state={
-    ProductListing:[],
-    loading: false,
-  error:null,
+// state={
+//     ProductListing:[],
+//     loading: false,
+//   error:null,
+// additional:{
+//     one:"one"
+// },
+// }
+
+constructor(){
+    super();
+    this.state = {
+        ProductListing:[],
+        loading: false,
+        error:null,
+        additional:{
+            one:"one"
+        },
+
+    };
+
 }
 
     componentDidMount() {
         console.log("componentDidMount invoked...");
-        this.fetchData();
+        document.title = "my project";
+        // this.fetchData();
 
     }
 
@@ -63,7 +82,7 @@ state={
              loading: true,
             });
             try{
-            const response1 = await Axios("https://fakestoreapi.com/products");
+            const response1 = await axios("https://fakestoreapi.com/products");
            console.log(response1, "response1");
 
 
