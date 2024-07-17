@@ -1,9 +1,7 @@
-// import MountingPhase from "./Components/class-components/mounting/mounting";
-// import ProductListing from "./Components/class-components/productListing/productListing";
-import ParentComponent from "./Components/class-components/purecomponent/Parent";
-// import UnMounting from "./Components/class-components/unmounting/unMounting";
 
-
+import TodoComponent from "./Components/functional-Hooks/usestate/todo.js";
+import Weather from "./Components/projects/countries.js";
+import TaskCount from "./Components/task/count.js";
 
 const App =() =>{
 
@@ -11,7 +9,12 @@ const App =() =>{
     // <ProductListing/>
     // <MountingPhase favColor={" red"}/>
     // <UnMounting></UnMounting>
-    <ParentComponent/>
+    // <ParentComponent/>
+    // <UseStateExample/>
+    // <TodoComponent/>
+
+   <TaskCount></TaskCount>
   )
+ 
 };
 export default App;
