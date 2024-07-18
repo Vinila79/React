@@ -4,7 +4,7 @@
 import { LockClosedIcon } from '@heroicons/react/solid'
 import { useRef } from 'react'
 
-export default function App() {
+export default function Form() {
     const EmailRef=useRef();
     const passwordRef = useRef();
     const Remembermeref = useRef();
