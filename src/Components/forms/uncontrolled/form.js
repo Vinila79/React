@@ -19,11 +19,9 @@ export default function App() {
         if (email.lenght < 20){
             console.log(email , password , remember)
           }else{
-            alert("invalid email")
+            alert("invalid email");
           }
     }
-
-
 
   return (
    
