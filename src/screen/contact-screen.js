@@ -1,7 +1,14 @@
 
+import React from "react";
+import Navbar from "../Components/navbar/navbar";
+
 const  ContactScreen= () =>{
     return(
-        <h2>wellcome to contact-Screen</h2>
+        <div>
+            <Navbar/>
+            <h2>wellcome to contact-Screen</h2>
+
+        </div>
     )
 };
 export default ContactScreen;
