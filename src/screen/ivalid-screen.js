@@ -4,12 +4,13 @@ import { useNavigate } from "react-router-dom";
 function InvalidScreen() {
     const navigate=useNavigate()
     const handleRedirection=()=>{
-        const isRedirect= true;
+        const isRedirect= true
         if(isRedirect){
-            navigate{"/"};
+            navigate("./")
         }else {
 
-        }};
+        };
+    }
         return(
         <>
         <h2>you have lost 404 custom error</h2>

@@ -26,13 +26,14 @@
 import "./button.module.css";
 
 const ButtonComponent = (prop) => {
-//   const ButtonStyle = { color: "red", backgroundColor: "green" };
+  const ButtonStyle = { color: "red", backgroundColor: "green" };
 
-  const { text, bgColor, onPress, width, height } = prop;
+  const { text, bgColor, onPress, height } = prop;
   return (
     <button
       onClick={onPress}
-      style={{ backgroundColor: bgColor, width: width, height: height }}
+      class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-10 mx-3 rounded"
+
     >
       {text}
     </button>
