@@ -36,8 +36,8 @@ const  HomeSCreen= () =>{
                     <>
                     {data.map((each) => {
                         return(
-                            <Link to={`/hyderabad/${each}/info`}>
-                            <ButtonComponent text={each} />
+                            <Link to={`/${each.category}/${each.id}/info`}>
+                            <ButtonComponent text={each.title} />
                             </Link>
                         );
                     })}
