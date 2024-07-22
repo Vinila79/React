@@ -1,12 +1,12 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import {NavLink } from "react-router-dom";
+import "./navbar.css";
 
 
 function Navbar () {
-    const LinkStyle = {
+    const NavLinkStyle = {
         textDecoration: "none",
     }
-
     const ListStyle = {
         margin: 10,
     }
@@ -15,29 +15,29 @@ function Navbar () {
   <div className="container-fluid">
     <ul className="navbar-nav">
       <li className="nav-item" style={ListStyle}>
-        {/* <a className="nav-link active" href="#">
+        {/* <a className="nav-Navlink active" href="#">
         Home
         </a> */}
-        <Link to={"/"} style={{LinkStyle}}>Home</Link>
+        <NavLink to={"/"} style={{NavLinkStyle}}>Home</NavLink>
       </li>
       <li className="nav-item">
-        {/* <a className="nav-link" href="#">
+        {/* <a className="nav-Navlink" href="#">
           about
         </a> */}
-        <Link to={"/about"} style={{LinkStyle}}>About</Link>
+        <NavLink to={"/about"} style={{NavLinkStyle}}>About</NavLink>
       </li>
       <li className="nav-item">
-        {/* <a className="nav-link" href="#">
+        {/* <a className="nav-Navlink" href="#">
           settings
         </a> */}
-        <Link to={"/settings"} style={{LinkStyle}}>settings</Link>
+        <NavLink to={"/settings"} style={{NavLinkStyle}}>settings</NavLink>
       </li>
 
       <li className="nav-item">
-        {/* <a className="nav-link" href="#">
+        {/* <a className="nav-Navlink" href="#">
          contact
         </a> */}
-        <Link to={"/contact"} style={{LinkStyle}}>contact</Link>
+        <NavLink to={"/contact"} style={{NavLinkStyle}}>contact</NavLink>
       </li>
 
     </ul>

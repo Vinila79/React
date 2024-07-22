@@ -5,6 +5,8 @@ import ContactScreen from "../screen/contact-screen"
 import SettingScreen from "../screen/setting-screen"
 import InvalidScreen from "../screen/ivalid-screen"
 import ProductDetails from "../screen/product-detail-screen"
+import DoctorScreen from "../screen/doctor-screen"
+import EngineerScreen from "../screen/engineer-screen"
 
 
 
@@ -14,14 +16,22 @@ const Stack = () =>{
         <BrowserRouter>
         <Routes>
             {/* these are the static routings */}
-            <Route path="/" Component={HomeSCreen}/>
-            <Route path="/about" Component={AboutScreen}/>
-            <Route path="/settings" Component={SettingScreen}/>
-            <Route path="/contact" Component={ContactScreen}/>
+            <Route path="/" element={<HomeSCreen/>}/>
+            <Route path="/about" element={<AboutScreen/>}/>
+            <Route path="/contact" element={<ContactScreen/>}>
+            <Route path="doctors" element={<DoctorScreen/>} />
+            <Route path="engineers" element={<EngineerScreen/>}/>
+            </Route>
 
-            <Route path="/:location/:resturantId/info" Component={ProductDetails}/>
+            <Route path="/settings" element={<SettingScreen/>}/>
 
-            <Route path="*" Component={InvalidScreen}/>
+            <Route 
+             path="/:location/:resturantId/info"
+             element={<ProductDetails/>}
+             />
+
+            <Route path="*" element={<InvalidScreen/>}/>
+
         </Routes>
         </BrowserRouter>
     )
