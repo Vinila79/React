@@ -12,15 +12,15 @@ export default function App() {
         event.preventDefault();
         const email=EmailRef.current.value
         const password = passwordRef.current.value;
-        const remember = Remembermeref.current.checked
+        const remember = Remembermeref.current.checked;
         
         console.log(email , password , remember )
 
-        if (email.lenght < 20){
-            console.log(email , password , remember)
-          }else{
-            alert("invalid email");
-          }
+        // if (email.lenght < 10){
+        //     console.log(email , password , remember)
+        //   }else{
+        //     alert("invalid email");
+        //   }
     }
 
   return (
