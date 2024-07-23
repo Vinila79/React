@@ -3,50 +3,18 @@ import Navbar from "../Components/navbar/navbar";
 import ButtonComponent from "../Components/button/button";
 import { Link } from "react-router-dom";
 import axios from "axios";
+import UseEffectExample from "../Components/useEffect/UseEffectEx";
+import UseEffectExample2 from "../Components/useEffect/UseEffectEx2";
+import UseEffectExample3 from "../Components/useEffect/UseEffectEx3";
 
 
 
 const  HomeSCreen= () =>{
-    const [data, setData] = useState([]);
-
-    const fetchData = async () => {
-        const response = await axios.get ("https://fakestoreapi.com/products");
-        if(response.status === 200) {
-            setData(response.data);
-        }
-    }
     return(
         <div>
             <Navbar/>
             <h2>wellcome to Home-Screen</h2>
-            {/* {
-                [1,2,3,4].map((each)=>{
-                    return(
-                        <>
-                        <Link to={`/hydherabad/${each}/info`}>
-                         
-                        <ButtonComponent text={each} />
-                        </Link>
-               
-                        </>     
-                    ) })
-            } */}
-            <button onClick={fetchData}>Fetch Data</button>
-            {
-                data.length > 0 ? (
-                    <>
-                    {data.map((each) => {
-                        return(
-                            <Link to={`/${each.category}/${each.id}/info`}>
-                            <ButtonComponent text={each.title} />
-                            </Link>
-                        );
-                    })}
-                    </>
-                ) : (
-                    <h5>No products found</h5>
-                )
-            }
+          <UseEffectExample3/>
         </div>
    
     )
