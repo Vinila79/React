@@ -6,7 +6,7 @@ function UseEffectExample(){
     const [data, setData]=useState([])
 
     useEffect(()=>{
-        console.log("use effecting executing...")
+        console.log("use effect is executing...")
         //perform side effects
         fetchData();
     },[]);

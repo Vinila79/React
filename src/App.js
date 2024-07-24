@@ -1,5 +1,6 @@
 
 // import ControlledForm from "./Components/forms/controlled/controlledform.js";
+import UseEffectTask from "./Components/task/UseEffectTask.js";
 import Stack from "./navigation/stack.js";
 // import Form from "./Components/forms/uncontrolled/form.js";
 // import TodoComponent from "./Components/functional-Hooks/usestate/todo.js";
@@ -10,7 +11,7 @@ const App =() =>{
 
   return(
     <div>
-        <Stack/>
+        <UseEffectTask/>
     </div>
   )
  

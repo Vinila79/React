@@ -6,4 +6,4 @@ const MemorizationEx = () => {
   )
 }
 
-export default MemorizationEx
+export default MemorizationEx;
