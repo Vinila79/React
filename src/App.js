@@ -1,5 +1,7 @@
 
 // import ControlledForm from "./Components/forms/controlled/controlledform.js";
+import SearchExample from "./Components/task/search.js";
+import SearchComponent from "./Components/task/search.js";
 import UseEffectTask from "./Components/task/UseEffectTask.js";
 import Stack from "./navigation/stack.js";
 // import Form from "./Components/forms/uncontrolled/form.js";
@@ -11,7 +13,8 @@ const App =() =>{
 
   return(
     <div>
-        <UseEffectTask/>
+        {/* <UseEffectTask/> */}
+        <SearchExample/>
     </div>
   )
  
