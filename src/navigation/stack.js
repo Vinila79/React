@@ -7,13 +7,23 @@ import InvalidScreen from "../screen/ivalid-screen"
 import ProductDetails from "../screen/product-detail-screen"
 import DoctorScreen from "../screen/doctor-screen"
 import EngineerScreen from "../screen/engineer-screen"
-import React, { Suspense } from "react"
+import React, { createContext, Suspense, useState } from "react"
 // import LazySetting = React.lazy(()=>import("../screen/setting-screen"))
 const LazySetting = React.lazy(() => import ("../screen/setting-screen"))
 
 
-const Stack = () =>{
+
+export const profileWrapper=createContext();
+
+function Stack  (){
+    const [profileInfo, setProfileInfo] = useState({
+        name:"ram",
+        salary:"50,000"
+    })
+
     return(
+        <profileWrapper.Provider value={profileInfo}>
+
         <BrowserRouter>
         <Routes>
             {/* these are the static routings */}
@@ -41,6 +51,7 @@ const Stack = () =>{
 
         </Routes>
         </BrowserRouter>
+        </profileWrapper.Provider>
     )
 }
 

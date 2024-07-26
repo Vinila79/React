@@ -1,0 +1,22 @@
+
+
+.SearchFunctionality{
+    text-align: center;
+    margin-top: 50px;
+};
+
+ input {
+  padding: 10px; 
+   font-size: 10px; 
+ margin-bottom: 15px;
+} 
+
+li {
+  padding: 10px;
+  font-size: 16px;
+}
+
+ul {
+    /* list-style-type: none; */
+    padding: 0;
+  }
