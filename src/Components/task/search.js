@@ -1,34 +1,6 @@
 import { useState } from "react";
 
 
-// const SearchComponent=()=>{
-    
-//     const [data , setdata]=useState("");
-//     const [items] = useState([
-//         "vinila", "gayatri", "bhargavi"
-//     ])
-
-//     SearchHandler=(event)=>{
-//         setdata={event.target.value}
-//     };
-//     filteredItemsm = {
-
-//     }
-//    return(
-//     <div>
-//         <h3>you can search hear</h3>
-//         <input type="text" placeholder="searching" value={items} onChange={SearchHandler}></input>
-//         </div>
-     
-        
-//    )
-
-// };
-// export default SearchComponent;
-
-
-
-
 import './search.css';
 
 const SearchFunctionality = () => {
