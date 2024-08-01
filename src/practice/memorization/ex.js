@@ -1,5 +1,5 @@
 import React, { useCallback, useMemo, useState } from 'react'
-import ExampleOfTasks from './ExampleOfTasks'
+import ExampleOfTasks from './ex2'
 
 const Exampleofmemorization = () => {
   const [count1,setcount]=useState(0)

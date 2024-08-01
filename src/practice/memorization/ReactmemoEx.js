@@ -19,7 +19,8 @@ const MemorizationEx = () => {
   const taskhandler=useCallback(()=>{
     console.log("iam function...")
     setTask((prev)=>[...prev,`newTask ${task.length}`])
-  },[task])
+  }
+  ,[task])
   
 
   return (
