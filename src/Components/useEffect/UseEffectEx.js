@@ -11,8 +11,6 @@ function UseEffectExample(){
         fetchData();
     },[]);
 
-
-
    const  fetchData = async ()=>{
 
         try{
@@ -40,7 +38,6 @@ function UseEffectExample(){
                     )
                 })
             }
-            
             </>
            }
             </div>

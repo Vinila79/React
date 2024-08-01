@@ -17,21 +17,30 @@ const fetchData = async () =>{
 };
 
 
+
 return(
     <div>
-       {/* {
+       {
     <>
         <h1>useEffect</h1>
-        {
+        {/* {
             data.map((eachdata)=> (
                 <h1>{eachdata.title}</h1>
             )
 
             )
-        }
+        } */}
+    {
+        data.map((eachdata)=>(
+            <h1>{eachdata.id} {eachdata.title}</h1>
+        ))
+    }
     </>
-       } */}
-       <table style={{borderCollapse:"collapse" ,border:"2px solid "}}>
+       }
+
+
+  
+       {/* <table style={{borderCollapse:"collapse" ,border:"2px solid "}}>
         <thead style={{border:"2px solid "}}>
             <tr style={{border:"2px solid "}}>
                 <th style={{border:"2px solid "}}>ID</th>
@@ -56,7 +65,7 @@ return(
                 ))
             }
         </tbody>
-       </table>
+       </table> */}
     </div>
 )
 }
