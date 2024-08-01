@@ -7,7 +7,6 @@ function UseEffectExample3 (){
 
         return ()=>{//befor leaving the current component, this return will execute.
             //clean up , prevent leak 
-
             window.removeEventListener("mousemove", captureMouse)
         };
     },[])

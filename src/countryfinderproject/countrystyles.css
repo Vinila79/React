@@ -1,0 +1,12 @@
+main{
+  background-color: white;
+ 
+}
+.search-bar{
+  display: flex;
+  align-items: row;
+}
+.country-list{
+  text-align: center;
+
+}
