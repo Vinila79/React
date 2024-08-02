@@ -1,15 +1,6 @@
-/* body {
-    font-family: Arial, sans-serif;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    background-color: #f0f0f0;
-    margin: 0;
-   
-   background-color:black
-  
-  } */
+
+
+
   
   .weather-app {
     text-align: center;
@@ -18,14 +9,18 @@
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
     width: 300px;
-   margin-top: 120px;
+   margin-top: 80px;
    margin-left: 300px; 
+   background-repeat: no-repeat;
+   background-size: cover;
+   /* opacity: 0.5; */
+   background-color:darkgray
   }
 
   .weather-info {
     margin-top: 20px;
-    /* background-repeat: no-repeat;
-    background-position: cover; */
+    background-repeat: no-repeat;
+    background-position: cover;
     /* background-image: url("https://getwallpapers.com/wallpaper/full/d/d/5/1369462-best-weather-wallpaper-2560x1600-windows-xp.jpg"); */
 
   }

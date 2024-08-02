@@ -5,6 +5,8 @@ import "./weatherapp.css";
 import cloudy from "./assets/weather.jpg"
 import rainy from "./assets/images.jpg"
 import sunnyweather from "./assets/download.jpg"
+import { Link } from "react-router-dom";
+// import bgimg from "./assets/weather2.jpg"
 
 const WeatherApp=()=>{
     const [city,setCity]=useState("")
@@ -39,9 +41,19 @@ useEffect(() => {
 }, [bgImage]);
 return(
   
-   
-    <div className="weather-app">
-         {/* style={{ backgroundImage: `url(${bgImage})` }} */}
+  
+   <div className="App">
+
+          <div className="nav-bar">
+      <Link to={"/"} className="heading1">Home</Link>
+      <Link to={"/countryfinder"} className="heading2">Country Finder</Link>
+      <Link to={"/weatherApp"} className="heading3">Weather App</Link>
+      <Link to={"/currency converter"} className="heading1">Cureency Converter</Link>
+      
+      </div>
+  
+    <div className="weather-app" style={{ backgroundImage: `url(${bgImage})` }}>
+         
   <div className="weather-info">
   <h1>Weather App</h1>
     <input type="text"  placeholder="search city here... " onChange={(e)=>setCity(e.target.value)}/>
@@ -54,6 +66,7 @@ return(
     <p>Wind-Speed:{weather.wind.speed}</p>
 
     </div>}
+    </div>
     </div>
     </div>
   

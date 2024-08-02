@@ -1,12 +1,37 @@
-main{
-  background-color: white;
  
-}
-.search-bar{
+
+.search-bar {
   display: flex;
-  align-items: row;
+  justify-content: center;
+  margin-bottom: 20px;
 }
-.country-list{
+.heading{
+  margin-left: 360px;
+}
+.country-list {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  padding: 20px;
+}
+
+.country-card {
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 20px;
   text-align: center;
+}
+
+.country-card img {
+  max-width: 100px;
+  margin-bottom: 10px;
+} 
+.pagination{
+  text-align: center;
+}
+.country-card:hover{
+ transform: scale(1.05);
 
 }
+

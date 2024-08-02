@@ -1,24 +1,18 @@
-
-
-
 import React, { useEffect, useState } from "react";
-import "./countrystyles.css";
+
 import axios from "axios";
 
-const CountryFinder = () => {
+const CountryFinders = () => {
   const [country, setCountry] = useState("");
   const [allCountries, setAllCountries] = useState([]);
   const [filteredCountries, setFilteredCountries] = useState([]);
-  const [currentPage, setCurrentPage] = useState(1);
-  const countriesPerPage = 4; 
 
   useEffect(() => {
     fetchData();
   }, []);
 
   const fetchData = async () => {
-    const response = await axios
-      .get("https://restcountries.com/v3.1/all")
+    const response = await axios.get("https://restcountries.com/v3.1/all")
       .then((response) => {
         setAllCountries(response.data);
         setFilteredCountries(response.data);
@@ -35,31 +29,11 @@ const CountryFinder = () => {
       countryData.name.common.toLowerCase().includes(country.toLowerCase())
     );
     setFilteredCountries(filtered);
-    setCurrentPage(1); 
-  };
-
-
-  const indexOfLastCountry = currentPage * countriesPerPage;
-  const indexOfFirstCountry = indexOfLastCountry - countriesPerPage;
-  const currentCountries = filteredCountries.slice(indexOfFirstCountry, indexOfLastCountry);
-
-  const totalPages = Math.ceil(filteredCountries.length / countriesPerPage);
-
-  const nextPage = () => {
-    if (currentPage < totalPages) {
-      setCurrentPage(currentPage + 1);
-    }
-  };
-
-  const prevPage = () => {
-    if (currentPage > 1) {
-      setCurrentPage(currentPage - 1);
-    }
   };
 
   return (
-    <div style={{ color: "black", backgroundColor: "white" }}>
-      <h1 className="heading">Country Finder</h1>
+    <div >
+      <h1>Country Finder</h1>
       <div className="search-bar">
         <input
           type="text"
@@ -71,9 +45,9 @@ const CountryFinder = () => {
       </div>
 
       <div className="country-list">
-        {currentCountries.map((countryData, index) => (
+        {filteredCountries.map((countryData) => (
           <div key={countryData.cca3} className="country-card">
-            <h2>{indexOfFirstCountry + index + 1}. {countryData.name.common}</h2>
+            <h2>{countryData.name.common}</h2>
             <img src={countryData.flags.png} alt={`${countryData.name.common} flag`} />
             <p><strong>Capital:</strong> {countryData.capital ? countryData.capital[0] : 'N/A'}</p>
             <p><strong>Region:</strong> {countryData.region}</p>
@@ -82,16 +56,8 @@ const CountryFinder = () => {
           </div>
         ))}
       </div>
-
-      <div className="pagination">
-        <button onClick={prevPage} disabled={currentPage === 1}>Previous</button>
-        <span> Page {currentPage} of {totalPages} </span>
-        <button onClick={nextPage} disabled={currentPage === totalPages}>Next</button>
-      </div>
     </div>
   );
 };
 
-export default CountryFinder;
-
-
+export default CountryFinders;

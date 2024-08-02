@@ -4,6 +4,7 @@
 import React, { useEffect, useState } from "react";
 import "./countrystyles.css";
 import axios from "axios";
+import { Link } from "react-router-dom";
 
 const CountryFinder = () => {
   const [country, setCountry] = useState("");
@@ -58,9 +59,19 @@ const CountryFinder = () => {
   };
 
   return (
-    <div style={{ color: "black", backgroundColor: "white" }}>
+    <div className="backgroundimg" style={{ color: "black", backgroundColor: "white" }}>
+      
+         <div className="nav-bar">
+      <Link to={"/"} className="heading1">Home</Link>
+      <Link to={"/countryfinder"} className="heading2">Country Finder</Link>
+      <Link to={"/weatherApp"} className="heading3">Weather App</Link>
+      <Link to={"/currency converter"} className="heading1">Cureency Converter</Link>
+      
+      </div>
+          
+
       <h1 className="heading">Country Finder</h1>
-      <div className="search-bar">
+      <div className="search-bar1">
         <input
           type="text"
           value={country}

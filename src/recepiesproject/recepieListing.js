@@ -1,6 +1,5 @@
-
 import React, { useEffect, useState } from "react";
-import './RecipeList.css';
+import styles from "./RecipeList.module.css";
 
 const RecipeList = () => {
   const [recipes, setRecipes] = useState([]);
@@ -27,26 +26,27 @@ const RecipeList = () => {
   };
 
   return (
-    <div className="App" style={{ backgroundImage: `url(${backgroundImage})` }}>
-      <input 
-        type="text" 
-        placeholder="Search recipes..." 
-        value={searchTerm} 
-        onChange={e => setSearchTerm(e.target.value)} 
-        className="search-bar"
+    <div className={styles.container} style={{ backgroundImage: `url(${backgroundImage})` }}>
+      <h1 className="title">Recipe List</h1>
+      <input
+        type="text"
+        placeholder="Search recipes..."
+        value={searchTerm}
+        onChange={e => setSearchTerm(e.target.value)}
+        className={styles["search-bar"]}
       />
-      <div className="card-container">
+      <div className={styles["card-container"]}>
         {filteredRecipes.map(recipe => (
-          <div 
-            className="card" 
-            key={recipe.id} 
+          <div
+            key={recipe.id}
+            className={styles.card}
             onMouseEnter={() => handleMouseEnter(recipe.image)}
             onMouseLeave={handleMouseLeave}
           >
             <img src={recipe.image} alt={recipe.name} />
-            <div className="card-content">
-              <h2 className="card-title">{recipe.name}</h2>
-              <ul className="card-ingredients">
+            <div className={styles["card-content"]}>
+              <h2 className={styles["card-title"]}>{recipe.name}</h2>
+              <ul className={styles["card-ingredients"]}>
                 {recipe.ingredients.map((ingredient, index) => (
                   <li key={index}>{ingredient}</li>
                 ))}
@@ -60,4 +60,3 @@ const RecipeList = () => {
 }
 
 export default RecipeList;
-
